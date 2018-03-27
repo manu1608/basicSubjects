@@ -759,11 +759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.iOS\\EZCode.iOS.csproj",
+      "projectUniqueName": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.iOS\\EZCode.iOS.csproj",
       "projectName": "EZCode.iOS",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.iOS\\EZCode.iOS.csproj",
+      "projectPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.iOS\\EZCode.iOS.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.iOS\\obj\\",
+      "outputPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -781,8 +781,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj"
+            "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj": {
+              "projectPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj"
             }
           }
         }

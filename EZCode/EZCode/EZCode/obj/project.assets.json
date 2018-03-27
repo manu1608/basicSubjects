@@ -387,11 +387,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj",
+      "projectUniqueName": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj",
       "projectName": "EZCode",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj",
+      "projectPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\obj\\",
+      "outputPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

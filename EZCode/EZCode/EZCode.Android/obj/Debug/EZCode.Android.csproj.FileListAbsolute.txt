@@ -94,10 +94,3 @@ C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\res\drawab
 C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\res\drawable-xhdpi\bill.png
 C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\res\drawable-hdpi\bill.png
 C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\res\drawable\bill.png
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\bin\Debug\EZCode.Android.dll
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\EZCode.pdb
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\EZCode.Android.dll.mdb
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\Xamarin.Forms.Core.dll.mdb
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Administrator\Desktop\EZCode\EZCode\EZCode.Android\obj\Debug\linksrc\Xamarin.Forms.Xaml.dll.mdb

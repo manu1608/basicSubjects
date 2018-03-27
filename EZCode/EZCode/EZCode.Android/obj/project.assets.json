@@ -712,11 +712,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.Android\\EZCode.Android.csproj",
+      "projectUniqueName": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.Android\\EZCode.Android.csproj",
       "projectName": "EZCode.Android",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.Android\\EZCode.Android.csproj",
+      "projectPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.Android\\EZCode.Android.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode.Android\\obj\\",
+      "outputPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -734,8 +734,8 @@
       "frameworks": {
         "monoandroid71": {
           "projectReferences": {
-            "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\Desktop\\EZCode\\EZCode\\EZCode\\EZCode.csproj"
+            "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj": {
+              "projectPath": "C:\\basicSubjects\\EZCode\\EZCode\\EZCode\\EZCode.csproj"
             }
           }
         }
