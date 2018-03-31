@@ -8,22 +8,22 @@ namespace EZCode.Database
 {
     public class MonHocDatabase
     {
-        public Task<List<EZCode.Model.MonHoc>> GetAllMonHocAsync()
+        public static Task<List<EZCode.Model.MonHoc>> GetAllMonHocAsync()
         {
             return Database.database.Table<EZCode.Model.MonHoc>().ToListAsync();
         }
 
-        public Task<EZCode.Model.MonHoc> GetMonHocAsync(int id)
+        public static Task<EZCode.Model.MonHoc> GetMonHocAsync(int id)
         {
             return Database.database.Table<EZCode.Model.MonHoc>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<EZCode.Model.MonHoc> GetMonHocAsync(string name)
+        public static Task<EZCode.Model.MonHoc> GetMonHocAsync(string name)
         {
             return Database.database.Table<EZCode.Model.MonHoc>().Where(i => i.Name == name).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveMonHocAsync(EZCode.Model.MonHoc monHoc)
+        public static Task<int> SaveMonHocAsync(EZCode.Model.MonHoc monHoc)
         {
             if (monHoc.Id == 0)
             {
@@ -35,7 +35,7 @@ namespace EZCode.Database
             }
         }
 
-        public Task<int> DeleteMonHocAsync(EZCode.Model.MonHoc monHoc)
+        public static Task<int> DeleteMonHocAsync(EZCode.Model.MonHoc monHoc)
         {
             return Database.database.DeleteAsync(monHoc);
         }

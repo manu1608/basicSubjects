@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace EZCode.Database
 {
@@ -10,13 +11,11 @@ namespace EZCode.Database
     {
         public static SQLiteAsyncConnection database;
 
-        public Database(string dbPath)
+        public Database(string dbName)
         {
+            string dbPath = DependencyService.Get<IDatabaseHelper>().GetLocalFilePath(dbName);
+            DependencyService.Get<IDatabaseHelper>().CopyDatabaseToLocal(dbPath);
             database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<EZCode.Model.MonHoc>().Wait();
-            database.CreateTableAsync<EZCode.Model.CongThuc>().Wait();
-            database.CreateTableAsync<EZCode.Model.BaiTap>().Wait();
-            database.CreateTableAsync<EZCode.Model.DeThi>().Wait();
         }
     }
 }

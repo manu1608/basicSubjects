@@ -8,22 +8,22 @@ namespace EZCode.Database
 {
     public class CongThucDatabase
     {
-        public Task<List<EZCode.Model.CongThuc>> GetAllCongThucAsync()
+        public static Task<List<EZCode.Model.CongThuc>> GetAllCongThucAsync()
         {
             return Database.database.Table<EZCode.Model.CongThuc>().ToListAsync();
         }
 
-        public Task<EZCode.Model.CongThuc> GetCongThucAsync(int id)
+        public static Task<EZCode.Model.CongThuc> GetCongThucAsync(int id)
         {
             return Database.database.Table<EZCode.Model.CongThuc>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<EZCode.Model.CongThuc> GetCongThucAsync(string name)
+        public static Task<EZCode.Model.CongThuc> GetCongThucAsync(string name)
         {
             return Database.database.Table<EZCode.Model.CongThuc>().Where(i => i.Name == name).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveCongThucAsync(EZCode.Model.CongThuc congThuc)
+        public static Task<int> SaveCongThucAsync(EZCode.Model.CongThuc congThuc)
         {
             if (congThuc.Id == 0)
             {
@@ -35,7 +35,7 @@ namespace EZCode.Database
             }
         }
 
-        public Task<int> DeleteCongThucAsync(EZCode.Model.CongThuc congThuc)
+        public static Task<int> DeleteCongThucAsync(EZCode.Model.CongThuc congThuc)
         {
             return Database.database.DeleteAsync(congThuc);
         }

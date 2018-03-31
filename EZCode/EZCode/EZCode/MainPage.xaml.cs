@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace EZCode
 {
-	public partial class MainPage : MasterDetailPage
+    public partial class MainPage : MasterDetailPage
 	{
         ObservableCollection<Model.ButtonItem> buttonItemList;
         public MainPage()

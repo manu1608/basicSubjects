@@ -8,22 +8,22 @@ namespace EZCode.Database
 {
     public class DeThiDatabase
     {
-        public Task<List<EZCode.Model.DeThi>> GetAllDeThiAsync()
+        public static Task<List<EZCode.Model.DeThi>> GetAllDeThiAsync()
         {
             return Database.database.Table<EZCode.Model.DeThi>().ToListAsync();
         }
 
-        public Task<EZCode.Model.DeThi> GetDeThiAsync(int id)
+        public static Task<EZCode.Model.DeThi> GetDeThiAsync(int id)
         {
             return Database.database.Table<EZCode.Model.DeThi>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<EZCode.Model.DeThi> GetDeThiAsync(string name)
+        public static Task<EZCode.Model.DeThi> GetDeThiAsync(string name)
         {
             return Database.database.Table<EZCode.Model.DeThi>().Where(i => i.Name == name).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveDeThiAsync(EZCode.Model.DeThi deThi)
+        public static Task<int> SaveDeThiAsync(EZCode.Model.DeThi deThi)
         {
             if (deThi.Id == 0)
             {
@@ -35,7 +35,7 @@ namespace EZCode.Database
             }
         }
 
-        public Task<int> DeleteDeThiAsync(EZCode.Model.DeThi deThi)
+        public static Task<int> DeleteDeThiAsync(EZCode.Model.DeThi deThi)
         {
             return Database.database.DeleteAsync(deThi);
         }
