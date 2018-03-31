@@ -9,12 +9,18 @@ namespace EZCode
 {
 	public partial class App : Application
 	{
-		public App ()
+        static Database.Database appDatabase;
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new EZCode.MainPage();
-		}
+            if (appDatabase == null)
+            {
+                appDatabase = new Database.Database("EZCodeDatabase.db3");
+            }
+
+            MainPage = new EZCode.MainPage();
+        }
 
 		protected override void OnStart ()
 		{
