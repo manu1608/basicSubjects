@@ -25,16 +25,19 @@ namespace EZCode
             ButtonListInit();
         }
 
-        public void ButtonListInit()
+        async public void ButtonListInit()
         {
             ButtonItemListView.ItemsSource = buttonItemList;
 
+            List<Model.MonHoc> monHocs = await Database.MonHocDatabase.GetAllMonHocAsync();
+
             buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.HOME_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.HOME_IMAGE });
-            buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.DAI_SO_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.DAI_SO_IMAGE });
-            buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.GIAI_TICH_I_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.GIAI_TICH_I_IMAGE });
-            buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.GIAI_TICH_II_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.GIAI_TICH_II_IMAGE });
-            buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.VAT_LY_I_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.VAT_LY_I_IMAGE });
-            buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.VAT_LY_II_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.VAT_LY_II_IMAGE });
+
+            for (int i = 0; i < monHocs.Count; i++)
+            {
+                buttonItemList.Add(new Model.ButtonItem { ButtonItemText = monHocs.ElementAt(i).Name, ButtonItemDetail = "", ButtonItemImage = monHocs.ElementAt(i).Image });
+            }
+
             buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.ABOUT_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.ABOUT_IMAGE });
             buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.FEEDBACK_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.FEEDBACK_IMAGE });
             buttonItemList.Add(new Model.ButtonItem { ButtonItemText = ConstantString.CONTACT_TEXT, ButtonItemDetail = "", ButtonItemImage = ConstantString.CONTACT_IMAGE });
