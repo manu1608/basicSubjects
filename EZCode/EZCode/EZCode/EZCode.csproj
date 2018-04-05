@@ -18,6 +18,12 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="PageItem\ExplainDetailPage.xaml.cs">
+      <DependentUpon>ExplainDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PageItem\DetailContentPage.xaml.cs">
+      <DependentUpon>DetailContentPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

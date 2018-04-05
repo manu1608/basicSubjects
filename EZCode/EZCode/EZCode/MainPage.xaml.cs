@@ -63,23 +63,23 @@ namespace EZCode
                     break;
 
                 case ConstantString.DAI_SO_TEXT:
-                    Detail = new NavigationPage(new PageItem());
+                    Detail = new NavigationPage(new PageItem((int)ConstantString.MON_HOC.DAI_SO));
                     break;
 
                 case ConstantString.GIAI_TICH_I_TEXT:
-                    Detail = new NavigationPage(new PageItem());
+                    Detail = new NavigationPage(new PageItem((int)ConstantString.MON_HOC.GIAI_TICH_1));
                     break;
 
                 case ConstantString.GIAI_TICH_II_TEXT:
-                    Detail = new NavigationPage(new PageItem());
+                    Detail = new NavigationPage(new PageItem((int)ConstantString.MON_HOC.GIAI_TICH_2));
                     break;
 
                 case ConstantString.VAT_LY_I_TEXT:
-                    Detail = new NavigationPage(new PageItem());
+                    Detail = new NavigationPage(new PageItem((int)ConstantString.MON_HOC.VAT_LY_1));
                     break;
 
                 case ConstantString.VAT_LY_II_TEXT:
-                    Detail = new NavigationPage(new PageItem());
+                    Detail = new NavigationPage(new PageItem((int)ConstantString.MON_HOC.VAT_LY_2));
                     break;
 
                 case ConstantString.ABOUT_TEXT:

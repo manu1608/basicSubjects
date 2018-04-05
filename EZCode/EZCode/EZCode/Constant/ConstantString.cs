@@ -25,5 +25,27 @@ namespace EZCode
         public const String ABOUT_IMAGE = "bill.png";
         public const String FEEDBACK_IMAGE = "bill.png";
         public const String CONTACT_IMAGE = "bill.png";
+
+        public const String EXPRESSIONS_TEXT    = "Công thức";
+        public const String EXERCISES_TEXT      = "Bài tập";
+        public const String EXAMS_TEXT          = "Đề thi";
+        public const String NOTES_TEXT          = "Ghi chú";
+
+        public enum PAGE_ITEM
+        {
+            PAGE_ITEM_EXPRESSION = 0,
+            PAGE_ITEM_EXERCISE,
+            PAGE_ITEM_EXAM,
+            PAGE_ITEM_NOTE,
+        };
+
+        public enum MON_HOC
+        {
+            DAI_SO =           1,
+            GIAI_TICH_1        ,
+            GIAI_TICH_2        ,
+            VAT_LY_1           ,
+            VAT_LY_2           ,
+        };
     }
 }
