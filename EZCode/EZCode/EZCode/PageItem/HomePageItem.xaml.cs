@@ -73,7 +73,15 @@ namespace EZCode
                     break;
             }
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
+            if (HomeListView != null)
+            {
+                HomeListView.ClearValue(ListView.SelectedItemProperty);
+            }
+        }
         async void GetKeyWordList()
         {
             List<Model.MonHoc> monHocs = await Database.MonHocDatabase.GetAllMonHocAsync();

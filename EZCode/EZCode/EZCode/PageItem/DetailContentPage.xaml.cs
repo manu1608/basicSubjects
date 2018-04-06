@@ -49,14 +49,15 @@ namespace EZCode
                         break;
                     }
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_EXAM:
-                    //List<Model.DeThi> exercise = await Database.DeThiDatabase.GetAllDeThiAsync();
-                    List<Model.DeThi> exam = await Database.MonHocDeThiDatabase.GetAllDeThiAsync(subject);
-                    for (int i = 0; i < exam.Count; i++)
                     {
-                        contentItemList.Add(new Model.ButtonItem { ButtonItemText = exam.ElementAt(i).Name, ButtonItemDetail = "", ButtonItemImage = exam.ElementAt(i).Image });
+                        //List<Model.DeThi> exercise = await Database.DeThiDatabase.GetAllDeThiAsync();
+                        List<Model.DeThi> exam = await Database.MonHocDeThiDatabase.GetAllDeThiAsync(subject);
+                        for (int i = 0; i < exam.Count; i++)
+                        {
+                            contentItemList.Add(new Model.ButtonItem { ButtonItemText = exam.ElementAt(i).Name, ButtonItemDetail = "", ButtonItemImage = exam.ElementAt(i).Image });
+                        }
+                        break;
                     }
-                    break;
-                    break;
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_NOTE:
                     break;
             }
@@ -64,16 +65,24 @@ namespace EZCode
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
+            if (e.SelectedItem != null)
             {
-                //ItemSelected is called on deselection, which results in SelectedItem being set to null
-                return;
+                Model.ButtonItem buttonItem = (Model.ButtonItem)e.SelectedItem;
+                Navigation.PushAsync(new ExplainDetailPage());
+
+                DisplayAlert("Hello", "This is page explain for\n" + buttonItem.ButtonItemText, "OK");
+
             }
+        }
 
-            Model.ButtonItem buttonItem = (Model.ButtonItem)e.SelectedItem;
-            Navigation.PushAsync(new ExplainDetailPage());
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-            DisplayAlert("Hello", "This is page explain for\n" + buttonItem.ButtonItemText, "OK");
+            if (DetailContentListView != null)
+            {
+                DetailContentListView.ClearValue(ListView.SelectedItemProperty);
+            }
         }
     }
 }
