@@ -1,14 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EZCode"
              x:Class="EZCode.PageItem"
-             NavigationPage.HasNavigationBar="False"
-             Title="Page Item">
-    <ContentPage.Content>
+             x:Name="PageItemList">
+
+    <!--<TabbedPage.Children>
+        <NavigationPage x:Name="Expression" Title="Công thức">
+            <x:Arguments>
+                <local:DetailContentPage />
+            </x:Arguments>
+        </NavigationPage >
+        <NavigationPage  x:Name="Exercise" Title="Bài tập">
+            <x:Arguments>
+                <local:DetailContentPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage  x:Name="Exam" Title="Đề thi">
+            <x:Arguments>
+                <local:DetailContentPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage x:Name="Notes" Title="Notes">
+            <x:Arguments>
+                <local:DetailContentPage />
+            </x:Arguments>
+        </NavigationPage>
         <StackLayout>
-            <Label Text="Mon hoc Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <SearchBar x:Name="HomeSearchBar">
+            </SearchBar>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </TabbedPage.Children>-->
+
+</TabbedPage>

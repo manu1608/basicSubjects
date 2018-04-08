@@ -53,27 +53,37 @@ namespace EZCode
             switch (buttonItem.ButtonItemText)
             {
                 case ConstantString.DAI_SO_TEXT:
-                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem());
+                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.DAI_SO));
                     break;
 
                 case ConstantString.GIAI_TICH_I_TEXT:
-                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem());
+                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.GIAI_TICH_1));
                     break;
 
                 case ConstantString.GIAI_TICH_II_TEXT:
-                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem());
+                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.GIAI_TICH_2));
                     break;
 
                 case ConstantString.VAT_LY_I_TEXT:
-                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem());
+                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.VAT_LY_1));
                     break;
 
                 case ConstantString.VAT_LY_II_TEXT:
-                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem());
+                    ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.VAT_LY_2));
+                    break;
+                default:
                     break;
             }
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
+            if (HomeListView != null)
+            {
+                HomeListView.ClearValue(ListView.SelectedItemProperty);
+            }
+        }
         async void GetKeyWordList()
         {
             List<Model.MonHoc> monHocs = await Database.MonHocDatabase.GetAllMonHocAsync();
