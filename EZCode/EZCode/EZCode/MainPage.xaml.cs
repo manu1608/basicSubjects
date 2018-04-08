@@ -19,6 +19,7 @@ namespace EZCode
             // set home page is default page 
             // set master page invisible
             Detail = new NavigationPage(new HomePageItem());
+
             IsPresented = false;
 
             buttonItemList = new ObservableCollection<Model.ButtonItem>();
@@ -93,9 +94,9 @@ namespace EZCode
                 case ConstantString.CONTACT_TEXT:
                     Detail = new NavigationPage(new ContactPageItem());
                     break;
+                default:
+                    break;
             }
-            
         }
-
     }
 }

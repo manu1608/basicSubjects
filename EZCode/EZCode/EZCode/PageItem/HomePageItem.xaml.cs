@@ -71,6 +71,8 @@ namespace EZCode
                 case ConstantString.VAT_LY_II_TEXT:
                     ((NavigationPage)((MasterDetailPage)App.Current.MainPage).Detail).PushAsync(new PageItem((int)ConstantString.MON_HOC.VAT_LY_2));
                     break;
+                default:
+                    break;
             }
         }
         protected override void OnAppearing()

@@ -30,7 +30,6 @@ namespace EZCode
             {
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_EXPRESSION:
                     {
-                        //List<Model.CongThuc> expr = await Database.CongThucDatabase.GetAllCongThucAsync();
                         List<Model.CongThuc> expr = await Database.MonHocCongThucDatabase.GetAllCongThucAsync(subject);
                         for (int i = 0; i < expr.Count; i++)
                         {
@@ -40,7 +39,6 @@ namespace EZCode
                     }
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_EXERCISE:
                     {
-                        //List<Model.BaiTap> exercise = await Database.BaiTapDatabase.GetAllBaiTapAsync();
                         List<Model.BaiTap> exercise = await Database.MonHocBaiTapDatabase.GetAllBaiTapAsync(subject);
                         for (int i = 0; i < exercise.Count; i++)
                         {
@@ -50,7 +48,6 @@ namespace EZCode
                     }
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_EXAM:
                     {
-                        //List<Model.DeThi> exercise = await Database.DeThiDatabase.GetAllDeThiAsync();
                         List<Model.DeThi> exam = await Database.MonHocDeThiDatabase.GetAllDeThiAsync(subject);
                         for (int i = 0; i < exam.Count; i++)
                         {
@@ -59,6 +56,8 @@ namespace EZCode
                         break;
                     }
                 case (int)ConstantString.PAGE_ITEM.PAGE_ITEM_NOTE:
+                    break;
+                default:
                     break;
             }
         }
@@ -71,7 +70,6 @@ namespace EZCode
                 Navigation.PushAsync(new ExplainDetailPage());
 
                 DisplayAlert("Hello", "This is page explain for\n" + buttonItem.ButtonItemText, "OK");
-
             }
         }
 
