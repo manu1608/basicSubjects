@@ -5,17 +5,18 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
-        <StackLayout>
-
-            <ListView x:Name="DetailContentListView" ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ImageCell Text="{Binding ButtonItemText}" Detail="{Binding ButtonItemDetail}" ImageSource="{Binding ButtonItemImage}"/>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </StackLayout>
+        <ListView x:Name="DetailContentListView" ItemSelected="OnItemSelected" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding ButtonItemText}" ></Label>
+                            <Image Source="{Binding ButtonItemImage}"></Image>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 
 </ContentPage>
