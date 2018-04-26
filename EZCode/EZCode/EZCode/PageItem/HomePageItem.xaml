@@ -14,10 +14,12 @@
 
             <Grid>
 
-                <ListView x:Name="HomeListView" ItemSelected="OnItemSelected">
+                <ListView x:Name="HomeListView" ItemSelected="OnItemSelected" RefreshCommand="{Binding LoadModelsCommand}"
+                          ItemsSource="{Binding monHocDatas}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ImageCell Text="{Binding ButtonItemText}" Detail="{Binding ButtonItemDetail}" ImageSource="{Binding ButtonItemImage}"/>
+                            <!--<ImageCell Text="{Binding ButtonItemText}" Detail="{Binding ButtonItemDetail}" ImageSource="{Binding ButtonItemImage}"/>-->
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
