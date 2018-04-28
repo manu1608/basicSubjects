@@ -11,6 +11,9 @@ using System.Diagnostics;
 
 using EZCode.Model;
 
+using Xamarin.Forms;
+
+[assembly: Dependency(typeof(EZCode.Services.AzureService))]
 namespace EZCode.Services
 {
     public class AzureService
@@ -25,7 +28,7 @@ namespace EZCode.Services
         {
             Debug.WriteLine("[ThanhHM] Function: AzureService::Initialize");
             // Check if Client is initialize or not
-            if (Client.SyncContext.IsInitialized == false)
+            if (Client?.SyncContext?.IsInitialized ?? false)
                 return;
 
             var appUrl = "https://ezcode.azurewebsites.net";
