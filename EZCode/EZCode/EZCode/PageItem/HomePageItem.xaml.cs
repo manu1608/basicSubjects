@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EZCode.Model;
 
 namespace EZCode
 {
@@ -15,17 +16,30 @@ namespace EZCode
     {
         ObservableCollection<Model.ButtonItem> buttonItemList;
         List<string> keyWordList;
+        ButtonItem monHocModel;
         public HomePageItem()
         {
             InitializeComponent();
 
             buttonItemList = new ObservableCollection<Model.ButtonItem>();
-            ButtonListInit();
+            //ButtonListInit();
 
             // for search
             GetKeyWordList();
 
             SuggestionListView.IsVisible = false;
+
+            monHocModel = new ButtonItem();
+            HomeListView.ItemTapped += (sender, e) =>
+            {
+                HomeListView.SelectedItem = null;
+            };
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            monHocModel.LoadModelsCommand.Execute(null);
         }
 
         async public void ButtonListInit()
@@ -75,15 +89,15 @@ namespace EZCode
                     break;
             }
         }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
 
-            if (HomeListView != null)
-            {
-                HomeListView.ClearValue(ListView.SelectedItemProperty);
-            }
-        }
+        //    if (HomeListView != null)
+        //    {
+        //        HomeListView.ClearValue(ListView.SelectedItemProperty);
+        //    }
+        //}
         async void GetKeyWordList()
         {
             List<Model.MonHoc> monHocs = await Database.MonHocDatabase.GetAllMonHocAsync();
